@@ -65,8 +65,14 @@
         ];
 
         function getSlug(name) {
-            return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        }
+                    return name.toLowerCase()
+                        .replace(/ /g, "-")
+                        .replace(/&/g, "and")
+                        .replace(/'/g, "")
+                        .replace(/[^a-z0-9-]/g, "")
+                        .replace(/-+/g, "-")
+                        .replace(/^-|-$/g, "");
+                }
 
         document.getElementById('productGrid').innerHTML = whiteWines.map(p => `
             <a href="/products/${getSlug(p.name)}/" class="product-card">
