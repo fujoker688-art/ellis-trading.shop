@@ -79,8 +79,16 @@
             { name: "LE DOMAINE DE LA GLORIETTE 2020 x 4", nameCn: "歌麗亭莊園白葡萄酒 四瓶特惠組", cat: "White Wine", price: "HK$1,255", img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg", badge: "Value" }
         ];
 
+        function getSlug(name) {
+            return name.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
         document.getElementById('productGrid').innerHTML = allWines.map(p => `
-            <div class="product-card">
+            <a href="/products/${getSlug(p.name)}/" class="product-card">
                 <div class="product-image">
                     <img src="${p.img}" alt="${p.name}" loading="lazy">
                     ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
@@ -90,12 +98,8 @@
                     <h3 class="product-name">${p.name}</h3>
                     <div class="product-name-cn">${p.nameCn}</div>
                     <div class="product-price">${p.price}</div>
-                    <div class="product-actions">
-                        <button class="btn btn-primary">Add to Cart</button>
-                        <button class="btn btn-secondary">View</button>
-                    </div>
                 </div>
-            </div>
+            </a>
         `).join('');
     </script>
 </body>

@@ -1257,23 +1257,19 @@
                 return name.toLowerCase().replace(/ /g, "-").replace(/&/g, "and").replace(/'/g, "").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
             }
             grid.innerHTML = filteredProducts.map(product => `
-                <div class="product-card" data-category="${product.cat.toLowerCase()}">
-                    <div class="product-image">
-                        <img src="${product.img}" alt="${product.name}" loading="lazy">
-                        ${product.badge ? `<span class="product-badge ${product.badge === 'New' ? 'new' : ''}">${product.badge}</span>` : ''}
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${product.cat}</div>
-                        <h3 class="product-name">${product.name}</h3>
-                        <div class="product-name-cn">${product.nameCn}</div>
-                        <div class="product-price">${product.price}</div>
-                        <div class="product-actions">
-                            <button class="btn btn-primary" onclick="addToCart('${product.name}', '${product.price}')">Add to Cart</button>
-                            <a href="/products/${getSlug(product.name)}/" class="btn btn-secondary" style="text-decoration:none;text-align:center;">View</a>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
+                            <a href="/products/${getSlug(product.name)}/" class="product-card" data-category="${product.cat.toLowerCase()}">
+                                <div class="product-image">
+                                    <img src="${product.img}" alt="${product.name}" loading="lazy">
+                                    ${product.badge ? `<span class="product-badge ${product.badge === 'New' ? 'new' : ''}">${product.badge}</span>` : ''}
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-category">${product.cat}</div>
+                                    <h3 class="product-name">${product.name}</h3>
+                                    <div class="product-name-cn">${product.nameCn}</div>
+                                    <div class="product-price">${product.price}</div>
+                                </div>
+                            </a>
+                        `).join('');
         }
 
         // Filter tabs

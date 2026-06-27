@@ -70,24 +70,23 @@
             { name: "LE DONJON DE CELEYRAN 2019 x 4", nameCn: "賽列亨城堡紅葡萄酒 四瓶特惠組", price: "HK$2,080", img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg", badge: "Value" }
         ];
 
-        document.getElementById('productGrid').innerHTML = redWines.map(p => `
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="${p.img}" alt="${p.name}" loading="lazy">
-                    ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Red Wine</div>
-                    <h3 class="product-name">${p.name}</h3>
-                    <div class="product-name-cn">${p.nameCn}</div>
-                    <div class="product-price">${p.price}</div>
-                    <div class="product-actions">
-                        <button class="btn btn-primary">Add to Cart</button>
-                        <button class="btn btn-secondary">View</button>
-                    </div>
-                </div>
-            </div>
-        `).join('');
+        function getSlug(name) {
+                    return name.toLowerCase().replace(/ /g, "-").replace(/&/g, "and").replace(/'/g, "").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
+                }
+                document.getElementById('productGrid').innerHTML = redWines.map(p => `
+                    <a href="/products/${getSlug(p.name)}/" class="product-card">
+                        <div class="product-image">
+                            <img src="${p.img}" alt="${p.name}" loading="lazy">
+                            ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Red Wine</div>
+                            <h3 class="product-name">${p.name}</h3>
+                            <div class="product-name-cn">${p.nameCn}</div>
+                            <div class="product-price">${p.price}</div>
+                        </div>
+                    </a>
+                `).join('');
     </script>
 </body>
 </html>
