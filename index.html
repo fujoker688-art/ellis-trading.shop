@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellis Trading - Premium Wines & Spirits</title>
-    <meta name="description" content="Ellis Trading - Your trusted source for premium wines and spirits from Bordeaux and beyond.">
+    <title>Ellis Trading - Premium Wines & Beauty Products</title>
+    <meta name="description" content="Ellis Trading - Your trusted source for premium wines from Bordeaux and beauty & body care products in Hong Kong.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -707,27 +707,32 @@
     </header>
 
     <section class="hero">
-        <h1>Premium Wines & Spirits</h1>
-        <p>Discover our curated selection of fine wines from Bordeaux and the world's finest vineyards</p>
+        <h1>Premium Wines & Beauty Products</h1>
+        <p>Discover our curated selection of fine wines from Bordeaux and premium beauty & body care products</p>
     </section>
 
     <section class="categories">
         <h2 class="section-title">Shop by Category</h2>
         <div class="category-grid">
-            <div class="category-card">
+            <div class="category-card" onclick="document.querySelector('[data-filter=red]').click()">
                 <div class="category-icon">🍷</div>
                 <h3>Red Wines</h3>
                 <p>Bold and complex selections from Bordeaux and beyond</p>
             </div>
-            <div class="category-card">
+            <div class="category-card" onclick="document.querySelector('[data-filter=white]').click()">
                 <div class="category-icon">🥂</div>
                 <h3>White Wines</h3>
                 <p>Crisp and refreshing whites for every occasion</p>
             </div>
-            <div class="category-card">
-                <div class="category-icon">🍾</div>
-                <h3>Champagne</h3>
-                <p>Celebrate with our premium sparkling selections</p>
+            <div class="category-card" onclick="document.querySelector('[data-filter=body]').click()">
+                <div class="category-icon">🧴</div>
+                <h3>Body Care</h3>
+                <p>Premium body milks, oils, and shower gels</p>
+            </div>
+            <div class="category-card" onclick="document.querySelector('[data-filter=hair]').click()">
+                <div class="category-icon">💆</div>
+                <h3>Hair Care</h3>
+                <p>Shampoos, conditioners, and hair treatments</p>
             </div>
         </div>
     </section>
@@ -736,9 +741,11 @@
         <h2 class="section-title">Our Wines</h2>
         
         <div class="filter-tabs">
-            <button class="filter-tab active" data-filter="all">All Wines</button>
+            <button class="filter-tab active" data-filter="all">All Products</button>
             <button class="filter-tab" data-filter="red">Red Wine</button>
             <button class="filter-tab" data-filter="white">White Wine</button>
+            <button class="filter-tab" data-filter="body">Body Care</button>
+            <button class="filter-tab" data-filter="hair">Hair Care</button>
         </div>
 
         <div class="product-grid" id="productGrid">
@@ -1107,6 +1114,135 @@
                 price: "HK$1,255",
                 img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg",
                 badge: "Value Pack"
+            },
+            // Beauty & Body Products
+            {
+                name: "EUCALYPTUS BODY MILK",
+                nameCn: "尤加利活力身體乳",
+                cat: "Body Care",
+                price: "HK$480",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "SANDALWOOD BODY MILK",
+                nameCn: "檀香亮彩身體乳",
+                cat: "Body Care",
+                price: "HK$480",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "SANDALWOOD SHOWER GEL",
+                nameCn: "檀香潤膚沐浴乳",
+                cat: "Body Care",
+                price: "HK$405",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "LAVENDER SHAMPOO",
+                nameCn: "薰衣草盈柔洗髮乳",
+                cat: "Hair Care",
+                price: "HK$299",
+                img: "/images/placeholder.png",
+                badge: "Popular"
+            },
+            {
+                name: "BODY SHAPING OIL",
+                nameCn: "玲瓏美體精華油",
+                cat: "Body Care",
+                price: "HK$325",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "EUCALYPTUS MASSAGE OIL",
+                nameCn: "尤加利淨化精油",
+                cat: "Body Care",
+                price: "HK$700",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "EUCALYPTUS SHAMPOO",
+                nameCn: "尤加利亮效洗髮乳",
+                cat: "Hair Care",
+                price: "HK$405",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "LAVENDER MASSAGE OIL",
+                nameCn: "薰衣草平衡精油",
+                cat: "Body Care",
+                price: "HK$700",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "COLOUR RESIST SHAMPOO",
+                nameCn: "染後三效洗髮精",
+                cat: "Hair Care",
+                price: "HK$575",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "Detangling & Moisturizing Conditioner",
+                nameCn: "滋逸潤絲乳",
+                cat: "Hair Care",
+                price: "HK$575",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "DRY FLAKES CONTROL SHAMPOO",
+                nameCn: "抗屑洗髮精",
+                cat: "Hair Care",
+                price: "HK$650",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "ENERGIZING SHAMPOO",
+                nameCn: "活力洗髮精",
+                cat: "Hair Care",
+                price: "HK$550",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "NOURISHING CREAM WITH SHEA BUTTER",
+                nameCn: "乳油木秀髮滋養霜",
+                cat: "Hair Care",
+                price: "HK$450",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "HAIR REPAIRING MASK",
+                nameCn: "乳油木修復膜",
+                cat: "Hair Care",
+                price: "HK$413",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "PROTECTIVE CREAM WITH SHEA BUTTER SPF 10",
+                nameCn: "乳油木秀髮防護霜 SPF 10",
+                cat: "Hair Care",
+                price: "HK$875",
+                img: "/images/placeholder.png",
+                badge: ""
+            },
+            {
+                name: "PROTECTIVE SPRAY SPF 10",
+                nameCn: "維生素秀髮防曬液SPF 10",
+                cat: "Hair Care",
+                price: "HK$625",
+                img: "/images/placeholder.png",
+                badge: ""
             }
         ];
 

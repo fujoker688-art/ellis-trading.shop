@@ -1,0 +1,25 @@
+const fs = require('fs');
+
+const products = [
+  { name: "尤加利活力身體乳", nameEn: "EUCALYPTUS BODY MILK", price: "HK$480", cat: "Body Care" },
+  { name: "檀香亮彩身體乳", nameEn: "SANDALWOOD BODY MILK", price: "HK$480", cat: "Body Care" },
+  { name: "檀香潤膚沐浴乳", nameEn: "SANDALWOOD SHOWER GEL", price: "HK$405", cat: "Body Care" },
+  { name: "薰衣草盈柔洗髮乳", nameEn: "LAVENDER SHAMPOO", price: "HK$299", cat: "Hair Care" },
+  { name: "玲瓏美體精華油", nameEn: "BODY SHAPING OIL", price: "HK$325", cat: "Body Care" },
+  { name: "尤加利淨化精油", nameEn: "EUCALYPTUS MASSAGE OIL", price: "HK$700", cat: "Body Care" },
+  { name: "尤加利亮效洗髮乳", nameEn: "EUCALYPTUS SHAMPOO", price: "HK$405", cat: "Hair Care" },
+  { name: "薰衣草平衡精油", nameEn: "LAVENDER MASSAGE OIL", price: "HK$700", cat: "Body Care" },
+  { name: "薰衣草盈柔洗髮乳500ml", nameEn: "LAVENDER SHAMPOO 500ML", price: "HK$405", cat: "Hair Care" },
+  { name: "染後三效洗髮精", nameEn: "COLOUR RESIST SHAMPOO", price: "HK$575", cat: "Hair Care" },
+  { name: "滋逸潤絲乳", nameEn: "Detangling & Moisturizing Conditioner", price: "HK$575", cat: "Hair Care" },
+  { name: "抗屑洗髮精", nameEn: "DRY FLAKES CONTROL SHAMPOO", price: "HK$650", cat: "Hair Care" },
+  { name: "抗屑舒緩霜100ML", nameEn: "CREME APAISANTE ANTI PELLICULAIRE 100ML", price: "HK$450", cat: "Hair Care" },
+  { name: "活力洗髮精", nameEn: "ENERGIZING SHAMPOO", price: "HK$550", cat: "Hair Care" },
+  { name: "乳油木秀髮滋養霜", nameEn: "NOURISHING CREAM WITH SHEA BUTTER", price: "HK$450", cat: "Hair Care" },
+  { name: "乳油木修復膜", nameEn: "HAIR REPAIRING MASK", price: "HK$413", cat: "Hair Care" },
+  { name: "乳油木秀髮防護霜 SPF 10", nameEn: "PROTECTIVE CREAM WITH SHEA BUTTER", price: "HK$875", cat: "Hair Care" },
+  { name: "維生素秀髮防曬液SPF 10 100ML", nameEn: "PROTECTIVE SPRAY SPF 10", price: "HK$625", cat: "Hair Care" }
+];
+
+fs.writeFileSync('C:/Users/User/_workspace/ellis-trading.shop/beauty_products.json', JSON.stringify(products, null, 2));
+console.log(`Saved ${products.length} beauty products`);
