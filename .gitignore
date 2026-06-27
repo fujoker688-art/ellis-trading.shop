@@ -1,2 +1,4 @@
 *.py
+*.js
 .gh_token
+beauty_products.json
