@@ -989,28 +989,41 @@
                 return sum + price * item.qty;
             }, 0);
 
-            let body = `NEW ORDER FROM ELLIS TRADING SHOP\n`;
-            body += `================================\n\n`;
-            body += `CUSTOMER:\n`;
-            body += `Name: ${name}\n`;
-            body += `Phone: ${phone}\n`;
-            body += `Email: ${email}\n`;
-            body += `Address: ${address}\n\n`;
-            body += `ITEMS:\n`;
+            let orderDetails = '';
             cart.forEach(item => {
-                body += `- ${item.name} x${item.qty} = ${item.price}\n`;
+                orderDetails += `- ${item.name} x${item.qty} = ${item.price}\n`;
             });
-            body += `\nTOTAL: HK$${total.toLocaleString()}\n`;
-            if (notes) body += `\nNotes: ${notes}\n`;
 
-            const subject = encodeURIComponent(`New Order - HK$${total.toLocaleString()}`);
-            const bodyEncoded = encodeURIComponent(body);
-            window.location.href = `mailto:ellistradinglimited2018@gmail.com?subject=${subject}&body=${bodyEncoded}`;
+            const formData = {
+                _subject: `New Order - HK$${total.toLocaleString()} from ${name}`,
+                name: name,
+                phone: phone,
+                email: email,
+                address: address,
+                notes: notes,
+                order: orderDetails,
+                total: `HK$${total.toLocaleString()}`
+            };
 
-            // Clear cart after order
-            cart = [];
-            saveCart();
-            closeCheckout();
+            fetch('https://formspree.io/f/xdargrng', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    cart = [];
+                    saveCart();
+                    closeCheckout();
+                    document.getElementById('checkoutForm').reset();
+                    alert('Order sent successfully! We will contact you shortly.');
+                } else {
+                    alert('Something went wrong. Please try again or contact us directly.');
+                }
+            })
+            .catch(() => {
+                alert('Network error. Please try again.');
+            });
         }
 
         // Product data
