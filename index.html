@@ -1253,6 +1253,9 @@
                 ? products 
                 : products.filter(p => p.cat.toLowerCase().includes(filter));
             
+            function getSlug(name) {
+                return name.toLowerCase().replace(/ /g, "-").replace(/&/g, "and").replace(/'/g, "").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
+            }
             grid.innerHTML = filteredProducts.map(product => `
                 <div class="product-card" data-category="${product.cat.toLowerCase()}">
                     <div class="product-image">
@@ -1266,7 +1269,7 @@
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
                             <button class="btn btn-primary" onclick="addToCart('${product.name}', '${product.price}')">Add to Cart</button>
-                            <button class="btn btn-secondary">View</button>
+                            <a href="/products/${getSlug(product.name)}/" class="btn btn-secondary" style="text-decoration:none;text-align:center;">View</a>
                         </div>
                     </div>
                 </div>
