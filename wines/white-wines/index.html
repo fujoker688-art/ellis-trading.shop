@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Wines - Ellis Trading</title>
+    <meta name="description" content="Shop our selection of premium white wines.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Ellis <span>Trading</span></a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wines/" class="active">Wines</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="cart-icon">🛒<span class="cart-count">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h1>White Wines</h1>
+        <p>Crisp and refreshing whites for every occasion</p>
+    </section>
+
+    <section class="products">
+        <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h5>Ellis Trading</h5>
+                <p>Your trusted source for premium wines and spirits.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wines/">Our Wines</a></li>
+                    <li><a href="/wines/red-wines/">Red Wines</a></li>
+                    <li><a href="/wines/white-wines/">White Wines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ellis Trading. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const whiteWines = [
+            { name: "LE DOMAINE DE LA GLORIETTE 2020", nameCn: "歌麗亭莊園白葡萄酒 2020", price: "HK$466", img: "/images/LE DOMAINE DE LA GLORIETTE 2020.jpg", badge: "New" },
+            { name: "LE DOMAINE DE LA GLORIETTE 2020 x 4", nameCn: "歌麗亭莊園白葡萄酒 四瓶特惠組", price: "HK$1,255", img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg", badge: "Value" }
+        ];
+
+        document.getElementById('productGrid').innerHTML = whiteWines.map(p => `
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="${p.img}" alt="${p.name}" loading="lazy">
+                    ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+                </div>
+                <div class="product-info">
+                    <div class="product-category">White Wine</div>
+                    <h3 class="product-name">${p.name}</h3>
+                    <div class="product-name-cn">${p.nameCn}</div>
+                    <div class="product-price">${p.price}</div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary">Add to Cart</button>
+                        <button class="btn btn-secondary">View</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>
