@@ -2,91 +2,128 @@
   {
     "name": "LA CUVEE HENRI 2018",
     "nameCn": "亨利特釀 2018",
+    "vintage": "2018",
+    "appellation": "Bordeaux Supérieur",
+    "winery": "Henri de Malrome",
+    "grapes": ["Cabernet Sauvignon", "Cabernet Franc", "Malbec", "Merlot"],
     "cat": "Red Wine",
-    "price": "HK$650",
-    "img": "https://www.speedmalls.com/back/images/product/1664420990000/1108_0_min.jpeg",
-    "detail": "/product/detail?displayProductId=1108&productId=1140",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則"
+    "price": "HK$680",
+    "img": "images/LA CUVEE HENRI 2018.jpg",
+    "detail": "/products/la-cuvee-henri-2018",
+    "skip_off_site": true,
+    "summary": "A classic Bordeaux Supérieur blend built for structure and depth: black-fruit intensity, oaking and spice, with a texture good for red meat and aged cheese.",
+    "taste": {
+      "primary": ["boysenberry", "black fruit"],
+      "secondary": ["clove", "tobacco", "cinnamon", "spices"],
+      "tertiary": ["oak"]
+    },
+    "foodPairing": [
+      "Grilled ribeye",
+      "Rack of lamb",
+      "Beef bourguignon",
+      "Aged cheddar",
+      "Roasted duck breast",
+      "Black truffle"
+    ],
+    "style": {
+      "body": "Full",
+      "tannin": "Firm",
+      "acidity": "Balanced",
+      "alcoholMin": 13.5,
+      "alcoholMax": 14.5,
+      "ageing": "12–18 months in oak",
+      "serve": "16–18 °C"
+    },
+    "fusionSeoText": "Henri de Malrome La Cuvée Henri Bordeaux Supérieur — a bold 2018 red from Bordeaux Supérieur, offering boysenberry and black fruit, layered with clove, tobacco, cinnamon and spices, with deep oakage."
   },
   {
     "name": "LA RÉSERVE DE ROSTÉGUY 2008",
     "nameCn": "羅斯特傑紅葡萄酒 2008",
     "cat": "Red Wine",
     "price": "HK$960",
-    "img": "https://www.speedmalls.com/back/images/product/1643076129000/242_0.jpeg",
-    "detail": "/product/detail?displayProductId=242&productId=225",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LA RÉSERVE DE ROSTÉGUY 2008.jpg",
+    "detail": "/products/la-rserve-de-rostguy-2008",
+    "skip_off_site": true,
+    "fusionSeoText": "Deep, mature red with kirsch, tobacco, and leather nuances, ready for celebratory dinners and cellar-worthy pairings. HK pickup available."
   },
   {
     "name": "LA RÉSERVE HENRI 2016",
     "nameCn": "亨利酒窖珍藏 2016",
     "cat": "Red Wine",
     "price": "HK$960",
-    "img": "https://www.speedmalls.com/back/images/product/1643076017000/238_0.jpeg",
-    "detail": "/product/detail?displayProductId=238&productId=222",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LA RÉSERVE HENRI 2016.jpg",
+    "detail": "/products/la-rserve-henri-2016",
+    "skip_off_site": true,
+    "fusionSeoText": "Elegant reserve red from Henri de Malrome with black fruit, toasted oak and a racy finish. Ideal for lamb and aged cheese. HK pickup available."
   },
   {
     "name": "COUR DE MONTEGNAN 2017",
     "nameCn": "蒙特尼昂庫爾紅葡萄酒 2017",
     "cat": "Red Wine",
     "price": "HK$550",
-    "img": "https://www.speedmalls.com/back/images/product/1644560221000/237_0.jpeg",
-    "detail": "/product/detail?displayProductId=237&productId=221",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/COUR DE MONTEGNAN 2017.jpg",
+    "detail": "/products/cour-de-montegnan-2017",
+    "skip_off_site": true,
+    "fusionSeoText": "Food-friendly Bordeaux-style red with dark fruit and supple tannins for everyday dining. HK pickup available."
   },
   {
     "name": "LE CLOS DE LA ROQUETTE 2019",
     "nameCn": "羅凱特葡萄園紅葡萄酒 2019",
     "cat": "Red Wine",
     "price": "HK$500",
-    "img": "https://www.speedmalls.com/back/images/product/1644546048000/1061_0.jpeg",
-    "detail": "/product/detail?displayProductId=1061&productId=1089",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE CLOS DE LA ROQUETTE 2019.jpg",
+    "detail": "/products/le-clos-de-la-roquette-2019",
+    "skip_off_site": true,
+    "fusionSeoText": "Fresh, approachable red fruit red with balanced oak, made for weeknight dinners and casual gatherings. HK pickup available."
   },
   {
     "name": "LE CLOS DE LA ROQUETTE 2019 x 4 BOTTLES",
     "nameCn": "羅凱特葡萄園紅葡萄酒 2019 四瓶特惠組",
     "cat": "Red Wine",
     "price": "HK$1,600",
-    "img": "https://www.speedmalls.com/back/images/product/1644546064000/1062_0.jpeg",
-    "detail": "/product/detail?displayProductId=1062&productId=1090",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE CLOS DE LA ROQUETTE 2019 x 4 BOTTLES.jpg",
+    "detail": "/products/le-clos-de-la-roquette-2019-x-4-bottles",
+    "skip_off_site": true,
+    "fusionSeoText": "Value case of four bottles of Le Clos de la Roquette 2019 — versatile Bordeaux for entertaining and gatherings. HK pickup available."
   },
   {
     "name": "LE DONJON DE CELEYRAN 2019",
     "nameCn": "賽列亨城堡紅葡萄酒 2019",
     "cat": "Red Wine",
     "price": "HK$650",
-    "img": "https://www.speedmalls.com/back/images/product/1644546098000/2293_0.jpeg",
-    "detail": "/product/detail?displayProductId=2382&productId=2494",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE DONJON DE CELEYRAN 2019.jpg",
+    "detail": "/products/le-donjon-de-celeyran-2019",
+    "skip_off_site": true,
+    "fusionSeoText": "Structured château-style red with cassis, pepper and firm tannins for steak and braised dishes. HK pickup available."
   },
   {
     "name": "LE DONJON DE CELEYRAN 2019 x 4 BOTTLES",
     "nameCn": "賽列亨城堡紅葡萄酒 2019 四瓶特惠組",
     "cat": "Red Wine",
     "price": "HK$2,080",
-    "img": "https://www.speedmalls.com/back/images/product/1644546098000/2293_0.jpeg",
-    "detail": "/product/detail?displayProductId=2383&productId=2495",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE DONJON DE CELEYRAN 2019 x 4 BOTTLES.jpg",
+    "detail": "/products/le-donjon-de-celeyran-2019-x-4-bottles",
+    "skip_off_site": true,
+    "fusionSeoText": "Family or restaurant case of four Le Donjon de Celeyran 2019 — bold, dinner-worthy Bordeaux for serious occasions. HK pickup available."
   },
   {
     "name": "LE DOMAINE DE LA GLORIETTE 2020",
     "nameCn": "歌麗亭莊園白葡萄酒 2020",
     "cat": "White Wine",
     "price": "HK$466",
-    "img": "https://www.speedmalls.com/back/images/product/1644545999000/1057_0.jpeg",
-    "detail": "/product/detail?displayProductId=1057&productId=1085",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE DOMAINE DE LA GLORIETTE 2020.jpg",
+    "detail": "/products/le-domaine-de-la-gloriette-2020",
+    "skip_off_site": true,
+    "fusionSeoText": "Crisp, aromatic white with citrus and stone fruit notes. Serve with seafood, salads and simply prepared fish. HK pickup available."
   },
   {
     "name": "LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES",
     "nameCn": "歌麗亭莊園白葡萄酒 2020 四瓶特惠組",
     "cat": "White Wine",
     "price": "HK$1,255",
-    "img": "https://www.speedmalls.com/back/images/product/1644546064000/1062_0.jpeg",
-    "detail": "/product/detail?displayProductId=1058&productId=1086",
-    "description": "繁體中文\nEnglish\n0\n新品上架\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌分類\nPrevious slide\nNext slide\n新品上架\nNEW\nActivitae活彩蔬纖飲\nActivitae Colour Fibre Mix\nHK$550\nEnerlab超利康沖泡飲\nEnerlab Livking Powder\nHK$760\nEnerlab超舒護膠囊\nEnerlab CraniZen\nHK$390\nEnerlab超鋒動能組\nEnerlab SuperMan+Turbo Pack\nHK$610\n看新品\n精選分類\nCATEGORIES\n美容美體\n健康生活\n家居香氛\n葡萄酒＆烈酒\n品牌\nBRANDS\nFAQ\n私隱政策\n條款與細則\n\n該商品已下架，請重新選購"
+    "img": "images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg",
+    "detail": "/products/le-domaine-de-la-gloriette-2020-x-4-bottles",
+    "skip_off_site": true,
+    "fusionSeoText": "White wine value case of four bottles for parties, picnics and light-menu dinners from Ellis Trading. HK pickup available."
   }
 ]
