@@ -695,7 +695,9 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Wines</a></li>
+                    <li><a href="#products">Wines &amp; Spirits</a></li>
+                    <li><a href="#filter-beauty">Beauty</a></li>
+                    <li><a href="#filter-wellness">Wellness</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1284,6 +1286,22 @@
         // Initial render
         renderProducts();
         updateCartCount();
+
+        // Auto-filter on hash (for category nav links like #filter-beauty, #filter-wellness)
+        const filterMap = {
+            'filter-beauty': 'body',
+            'filter-wellness': 'hair',
+            'filter-wines': 'all'
+        };
+        const initialHash = window.location.hash.replace('#', '');
+        if (filterMap[initialHash]) {
+            const tab = document.querySelector(`.filter-tab[data-filter="${filterMap[initialHash]}"]`);
+            if (tab) {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                renderProducts(filterMap[initialHash]);
+            }
+        }
 
         // Smooth scroll for navigation
         document.querySelectorAll('nav a').forEach(link => {
