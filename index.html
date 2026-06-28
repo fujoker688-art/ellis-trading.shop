@@ -695,7 +695,13 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Wines &amp; Spirits</a></li>
+                    <li>
+                    <a href="#products" class="dropdown-toggle">Wines &amp; Spirits</a>
+                    <ul>
+                        <li><a href="#filter-red">Red Wines</a></li>
+                        <li><a href="#filter-white">White Wines</a></li>
+                    </ul>
+                </li>
                     <li><a href="#filter-beauty">Beauty</a></li>
                     <li><a href="#filter-wellness">Wellness</a></li>
                     <li><a href="#about">About</a></li>
@@ -1291,6 +1297,8 @@
         const filterMap = {
             'filter-beauty': 'body',
             'filter-wellness': 'hair',
+            'filter-red': 'red',
+            'filter-white': 'white',
             'filter-wines': 'all'
         };
         const initialHash = window.location.hash.replace('#', '');
@@ -1309,7 +1317,9 @@
                 const href = link.getAttribute('href');
                 if (href.startsWith('#')) {
                     e.preventDefault();
-                    const target = document.querySelector(href);
+                    // For filter hashes, scroll to products section
+                    const targetId = href.includes('filter-') ? '#products' : href;
+                    const target = document.querySelector(targetId);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
                     }
