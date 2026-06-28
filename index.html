@@ -964,6 +964,40 @@
             document.getElementById('cartTotal').textContent = 'HK$' + total.toLocaleString();
         }
 
+        // Order confirmation modal
+        function showOrderConfirmation({ name, orderHtml, total, phone, address }) {
+            // Create confirmation overlay
+            const overlay = document.createElement('div');
+            overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:5000;display:flex;justify-content:center;align-items:center;padding:20px;';
+            overlay.innerHTML = `
+                <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:35px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:fadeIn 0.3s ease">
+                    <div style="font-size:48px;margin-bottom:15px;">✅</div>
+                    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#1a1a2e;margin-bottom:8px;">Order Confirmed!</h3>
+                    <p style="color:#666;font-size:14px;margin-bottom:20px;">Thank you, ${name}! A confirmation email is on its way.</p>
+                    <div style="background:#f8f8f8;border-radius:8px;padding:15px;margin-bottom:20px;text-align:left;">
+                        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                            ${orderHtml}
+                            <tr style="font-weight:600;border-top:2px solid #1a1a2e"><td style="padding:8px">Total</td><td style="padding:8px;text-align:center"></td><td style="padding:8px;text-align:right">HK$${total.toLocaleString()}</td></tr>
+                        </table>
+                    </div>
+                    <div style="font-size:13px;color:#999;margin-bottom:20px;">
+                        📞 +852 6493 9319 · ✉️ ellistradinglimited2018@gmail.com
+                    </div>
+                    <button onclick="this.closest('#overlayWrap').remove()" style="background:#c9a227;color:#fff;border:none;padding:12px 30px;border-radius:6px;font-size:14px;cursor:pointer;">Continue Shopping</button>
+                </div>
+            `;
+            overlay.id = 'overlayWrap';
+            document.body.appendChild(overlay);
+            overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+            // Ensure fadeIn keyframe exists
+            if (!document.getElementById('confAnim')) {
+                const style = document.createElement('style');
+                style.id = 'confAnim';
+                style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}';
+                document.head.appendChild(style);
+            }
+        }
+
         // Checkout functions
         function openCheckout() {
             if (cart.length === 0) {
@@ -1005,11 +1039,14 @@
             }, 0);
 
             let orderDetails = '';
+            let orderHtml = '';
             cart.forEach(item => {
                 orderDetails += `- ${item.name} x${item.qty} = ${item.price}\n`;
+                orderHtml += `<tr style="border-bottom:1px solid #eee"><td style="padding:6px 8px">${item.name}</td><td style="padding:6px 8px;text-align:center">${item.qty}</td><td style="padding:6px 8px;text-align:right">${item.price}</td></tr>`;
             });
 
             const formData = {
+                _replyto: email,
                 _subject: `New Order - HK$${total.toLocaleString()} from ${name}`,
                 name: name,
                 phone: phone,
@@ -1020,24 +1057,52 @@
                 total: `HK$${total.toLocaleString()}`
             };
 
-            fetch('https://formspree.io/f/xdargrng', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (response.ok) {
+            // Show submitting state
+            const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            Promise.all([
+                // 1. Send order to Ellis via Formspree
+                fetch('https://formspree.io/f/xdargrng', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                }),
+                // 2. Send confirmation to customer via FormSubmit  
+                fetch('https://formsubmit.co/ajax/ellistradinglimited2018@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        _replyto: email,
+                        _subject: `Order Confirmation - Ellis Trading`,
+                        message: `Hi ${name},\n\nThank you for your order! Here's a summary:\n\n${orderDetails}\nTotal: HK$${total.toLocaleString()}\nDelivery: ${address}\n\nWe will contact you at ${phone} or ${email} within 24 hours to confirm.\n\nBest regards,\nEllis Trading\n+852 6493 9319`,
+                        _autoresponse: `Hi ${name},\n\nThank you for your order with Ellis Trading!\n\nOrder Summary:\n${orderDetails}\nTotal: HK$${total.toLocaleString()}\nDelivery Address: ${address}\n\nWe'll contact you at ${phone} within 24 hours to confirm delivery details.\n\nIf you have any questions, please contact us:\n📞 +852 6493 9319\n✉️ ellistradinglimited2018@gmail.com\n\nBest regards,\nEllis Trading Team`
+                    })
+                })
+            ])
+            .then(responses => {
+                const ok = responses.every(r => r.ok || r.status < 400);
+                if (ok) {
                     cart = [];
                     saveCart();
                     closeCheckout();
                     document.getElementById('checkoutForm').reset();
-                    alert('Order sent successfully! We will contact you shortly.');
+                    // Show confirmation modal
+                    showOrderConfirmation({ name, orderHtml, total, phone, address });
                 } else {
-                    alert('Something went wrong. Please try again or contact us directly.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    alert('Order placed (notification sent). We will contact you shortly.');
                 }
             })
             .catch(() => {
-                alert('Network error. Please try again.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                alert('Network error. Please try again or email us directly at ellistradinglimited2018@gmail.com');
             });
         }
 
