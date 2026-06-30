@@ -3,1401 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellis Trading - Premium Wines & Beauty Products</title>
-    <meta name="description" content="Ellis Trading - Your trusted source for premium wines from Bordeaux and beauty & body care products in Hong Kong.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--color-primary, #c9a84c);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 10000;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+    <!-- Primary Meta Tags -->
+    <title>Vino & Beauté — Premium Wines & Beauty | ellis-trading.shop</title>
+    <meta name="title" content="Vino & Beauté — Premium Wines & Beauty | ellis-trading.shop">
+    <meta name="description" content="Discover curated premium wines from Bordeaux and luxury beauty products. Shop red wines, white wines, skincare, fragrances & wellness at Vino & Beauté — ellis-trading.shop.">
+    <meta name="keywords" content="premium wine, Bordeaux wine, red wine, white wine, luxury beauty, skincare, fragrance, wellness, estebel, senbel, Henri de Malrome, ellis trading shop, HK wines, HK beauty">
+    <meta name="author" content="Vino & Beauté">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://ellis-trading.shop/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ellis-trading.shop/">
+    <meta property="og:title" content="Vino & Beauté — Premium Wines & Beauty">
+    <meta property="og:description" content="Discover curated premium wines from Bordeaux and luxury beauty products. Shop red wines, white wines, skincare, fragrances & wellness.">
+    <meta property="og:image" content="https://ellis-trading.shop/images/og-home.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:site_name" content="Vino & Beauté">
+    <meta property="og:locale" content="en_HK">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ellis-trading.shop/">
+    <meta name="twitter:title" content="Vino & Beauté — Premium Wines & Beauty">
+    <meta name="twitter:description" content="Discover curated premium wines from Bordeaux and luxury beauty products.">
+    <meta name="twitter:image" content="https://ellis-trading.shop/images/og-home.svg">
+
+    <!-- Structured Data: Organization + WebSite + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://ellis-trading.shop/#organization",
+                "name": "Vino & Beauté",
+                "url": "https://ellis-trading.shop",
+                "logo": "https://ellis-trading.shop/images/favicon.svg",
+                "sameAs": [
+                    "https://www.instagram.com/",
+                    "https://www.facebook.com/"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+852-64939319",
+                    "contactType": "customer service",
+                    "availableLanguage": ["English", "Chinese"]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://ellis-trading.shop/#website",
+                "url": "https://ellis-trading.shop",
+                "name": "Vino & Beauté",
+                "description": "Premium wines & beauty e-commerce",
+                "publisher": {
+                    "@id": "https://ellis-trading.shop/#organization"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://ellis-trading.shop/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://ellis-trading.shop/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ellis-trading.shop/"
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://ellis-trading.shop/#webpage",
+                "url": "https://ellis-trading.shop/",
+                "name": "Vino & Beauté — Premium Wines & Beauty",
+                "description": "Discover curated premium wines from Bordeaux and luxury beauty products.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                    "@id": "https://ellis-trading.shop/#website"
+                },
+                "about": {
+                    "@id": "https://ellis-trading.shop/#organization"
+                },
+                "breadcrumb": {
+                    "@id": "https://ellis-trading.shop/#breadcrumb"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --color-primary: #1a1a2e;
-            --color-secondary: #16213e;
-            --color-accent: #c9a227;
-            --color-accent-hover: #b8922a;
-            --color-text: #333333;
-            --color-text-light: #666666;
-            --color-bg: #fafafa;
-            --color-white: #ffffff;
-            --color-border: #e8e8e8;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--color-text);
-            background-color: var(--color-bg);
-            line-height: 1.6;
-        }
-
-        /* Header */
-        header {
-            background: var(--color-primary);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--color-white);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--color-accent);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: var(--color-white);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--color-accent);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .cart-icon {
-            color: var(--color-white);
-            font-size: 20px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--color-accent);
-            color: var(--color-white);
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 50%;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            padding: 80px 30px;
-            text-align: center;
-            color: var(--color-white);
-        }
-
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-size: 48px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            font-weight: 300;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        /* Categories */
-        .categories {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 30px;
-        }
-
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 32px;
-            font-weight: 500;
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--color-primary);
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .category-card {
-            background: var(--color-white);
-            border-radius: 8px;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            display: block;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .category-card img {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .category-card h3 {
-            font-family: var(--font-heading);
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--color-primary);
-            margin-bottom: 10px;
-        }
-
-        .category-card p {
-            font-size: 14px;
-            color: var(--color-text-light);
-        }
-
-        /* Products Section */
-        .products {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 30px;
-            background: var(--color-white);
-        }
-
-        .filter-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .filter-tab {
-            padding: 10px 25px;
-            background: transparent;
-            border: 2px solid var(--color-border);
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-tab.active,
-        .filter-tab:hover {
-            background: var(--color-primary);
-            color: var(--color-white);
-            border-color: var(--color-primary);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: var(--color-white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid var(--color-border);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .product-image {
-            position: relative;
-            padding-top: 100%;
-            background: #f5f5f5;
-        }
-
-        .product-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--color-accent);
-            color: var(--color-white);
-            padding: 5px 12px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 3px;
-        }
-
-        .product-badge.new {
-            background: #27ae60;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-category {
-            font-size: 12px;
-            color: var(--color-accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .product-name {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--color-primary);
-            margin-bottom: 5px;
-            line-height: 1.3;
-        }
-
-        .product-name-cn {
-            font-size: 13px;
-            color: var(--color-text-light);
-            margin-bottom: 12px;
-        }
-
-        .product-price {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin-bottom: 15px;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-primary {
-            background: var(--color-accent);
-            color: var(--color-white);
-            flex: 1;
-        }
-
-        .btn-primary:hover {
-            background: var(--color-accent-hover);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 1px solid var(--color-border);
-            color: var(--color-text);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-        }
-
-        /* Features */
-        .features {
-            background: var(--color-primary);
-            padding: 60px 30px;
-            color: var(--color-white);
-        }
-
-        .features-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-item {
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .feature-item h4 {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        .feature-item p {
-            font-size: 14px;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--color-primary);
-            color: var(--color-white);
-            padding: 60px 30px 30px;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-section h5 {
-            font-family: var(--font-heading);
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: var(--color-accent);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--color-white);
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 40px auto 0;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
-        }
-
-        /* Cart Sidebar */
-        .cart-sidebar {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 400px;
-            max-width: 100vw;
-            height: 100vh;
-            background: var(--color-white);
-            box-shadow: -5px 0 30px rgba(0,0,0,0.2);
-            z-index: 2000;
-            transition: right 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cart-sidebar.open {
-            right: 0;
-        }
-
-        .cart-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .cart-overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .cart-header h3 {
-            font-family: var(--font-heading);
-            font-size: 22px;
-            color: var(--color-primary);
-        }
-
-        .cart-close {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--color-text-light);
-        }
-
-        .cart-items {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .cart-item-name {
-            font-weight: 500;
-            font-size: 14px;
-            color: var(--color-primary);
-        }
-
-        .cart-item-price {
-            font-size: 13px;
-            color: var(--color-accent);
-            margin-top: 4px;
-        }
-
-        .cart-item-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cart-item-actions button {
-            width: 28px;
-            height: 28px;
-            border: 1px solid var(--color-border);
-            background: var(--color-white);
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .cart-item-actions button:hover {
-            border-color: var(--color-primary);
-        }
-
-        .cart-item-remove {
-            color: #e74c3c !important;
-            border-color: #e74c3c !important;
-        }
-
-        .cart-footer {
-            padding: 20px;
-            border-top: 1px solid var(--color-border);
-        }
-
-        .cart-total {
-            display: flex;
-            justify-content: space-between;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-primary);
-        }
-
-        /* Checkout Modal */
-        .checkout-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            z-index: 3000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .checkout-modal.open {
-            display: flex;
-        }
-
-        .checkout-content {
-            background: var(--color-white);
-            border-radius: 10px;
-            width: 100%;
-            max-width: 500px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 30px;
-        }
-
-        .checkout-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .checkout-header h3 {
-            font-family: var(--font-heading);
-            font-size: 24px;
-            color: var(--color-primary);
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--color-text);
-            margin-bottom: 6px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid var(--color-border);
-            border-radius: 6px;
-            font-size: 14px;
-            font-family: var(--font-body);
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-accent);
-        }
-
-        .order-summary {
-            background: #f8f8f8;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .order-summary h4 {
-            font-size: 14px;
-            margin-bottom: 10px;
-            color: var(--color-primary);
-        }
-
-        .order-summary .order-line {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            padding: 4px 0;
-        }
-
-        .order-summary .order-total {
-            border-top: 1px solid var(--color-border);
-            margin-top: 8px;
-            padding-top: 8px;
-            font-weight: 600;
-            font-size: 15px;
-        }
-    </style>
+    <link rel="dns-prefetch" href="https://www.speedmalls.com">
+
+    <!-- Fonts with display=swap for performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/seo.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0f0b14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo">Ellis <span>Trading</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li>
-                    <a href="#products" class="dropdown-toggle">Wines &amp; Spirits</a>
-                    <ul>
-                        <li><a href="#filter-red">Red Wines</a></li>
-                        <li><a href="#filter-white">White Wines</a></li>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+
+    <!-- Header / Navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo" aria-label="Vino & Beauté Home">
+                    <span class="logo__mark">V</span>
+                    <span class="logo__text">Vino & Beauté</span>
+                </a>
+
+                <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/" class="nav__link active" aria-current="page">Home</a></li>
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="/category.html?cId=7" class="nav__link" aria-haspopup="true" aria-expanded="false">Wines</a>
+                            <div class="dropdown" role="menu">
+                                <a href="/category.html?cId=7&amp;csubId=14" class="dropdown__link" role="menuitem">Red Wines</a>
+                                <a href="/category.html?cId=7&amp;csubId=15" class="dropdown__link" role="menuitem">White Wines</a>
+                            </div>
+                        </li>
+                        <li class="nav__item"><a href="/category.html?cId=2" class="nav__link">Beauty</a></li>
+                        <li class="nav__item"><a href="#brands" class="nav__link">Brands</a></li>
                     </ul>
-                </li>
-                    <li><a href="#filter-beauty">Beauty</a></li>
-                    <li><a href="#filter-wellness">Wellness</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <div class="cart-icon" onclick="toggleCart()">🛒<span class="cart-count">0</span></div>
+                </nav>
+
+                <div class="header__actions">
+                    <button class="search-toggle" aria-label="Search products" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M14 14l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+                    <button class="cart-btn" aria-label="Shopping cart" onclick="toggleCart()" aria-haspopup="dialog">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 1h2l1 4m0 0h10l-1.5 7H5.5L3 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="17" r="1" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="17" r="1" stroke="currentColor" stroke-width="1.5"/></svg>
+                        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+                    </button>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search overlay -->
+        <div class="search-overlay" id="searchOverlay" role="search" aria-label="Product search">
+            <div class="container">
+                <label for="searchInput" class="sr-only">Search wines, beauty products, brands</label>
+                <input type="search" class="search-input" placeholder="Search wines, beauty products, brands..." id="searchInput" oninput="filterProducts(this.value)" autocomplete="off">
+                <button class="search-close" onclick="toggleSearch()" aria-label="Close search">✕</button>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <h1>Premium Wines & Beauty Products</h1>
-        <p>Discover our curated selection of fine wines from Bordeaux and premium beauty & body care products</p>
-    </section>
+    <main id="main-content" role="main">
+        <!-- Hero Banner -->
+        <section class="hero" id="hero" aria-label="Featured collections">
+            <div class="hero__slides" id="heroSlides">
+                <div class="hero__slide active" style="background-image: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
+                    <div class="container">
+                        <div class="hero__content">
+                            <h1 class="hero__title">Fine Wines &amp; Spirits</h1>
+                            <p class="hero__subtitle">Curated selections from the world's finest vineyards — Bordeaux, Burgundy &amp; beyond</p>
+                            <a href="/category.html?cId=7" class="btn btn--primary" aria-label="Explore our wine collection">Explore Wines</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slide" style="background-image: linear-gradient(135deg, #1a0a2e 0%, #3d2555 50%, #1a0a2e 100%);" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
+                    <div class="container">
+                        <div class="hero__content">
+                            <h1 class="hero__title">Premium Beauty</h1>
+                            <p class="hero__subtitle">Discover luxury skincare, fragrances &amp; wellness from top European brands</p>
+                            <a href="/category.html?cId=2" class="btn btn--primary" aria-label="Explore our beauty collection">Explore Beauty</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slide" style="background-image: linear-gradient(135deg, #1a0a2e 0%, #4a1555 50%, #1a0a2e 100%);" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
+                    <div class="container">
+                        <div class="hero__content">
+                            <h1 class="hero__title">New Arrivals</h1>
+                            <p class="hero__subtitle">Latest additions to our premium collection</p>
+                            <a href="/category.html?cId=2" class="btn btn--primary" aria-label="Shop new arrivals">Shop New</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__dots" id="heroDots" role="tablist" aria-label="Hero slides"></div>
+            <button class="hero__prev" onclick="prevSlide()" aria-label="Previous slide">&#8249;</button>
+            <button class="hero__next" onclick="nextSlide()" aria-label="Next slide">&#8250;</button>
+        </section>
 
-    <section class="categories">
-        <h2 class="section-title">Shop by Category</h2>
-        <div class="category-grid">
-            <a class="category-card" href="/wines/red-wines/">
-                <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80" alt="Red Wine" loading="lazy" onerror="this.style.display='none'" />
-                <h3>Red Wines</h3>
-                <p>Bold and complex selections from Bordeaux and beyond</p>
-            </a>
-            <a class="category-card" href="/wines/white-wines/">
-                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="White Wine" loading="lazy" onerror="this.style.display='none'" />
-                <h3>White Wines</h3>
-                <p>Crisp and refreshing whites for every occasion</p>
-            </a>
-            <a class="category-card" href="#">
-                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=80" alt="Beauty" loading="lazy" onerror="this.style.display='none'" />
-                <h3>Body Care</h3>
-                <p>Premium body milks, oils, and shower gels</p>
-            </a>
-            <a class="category-card" href="#">
-                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Gift" loading="lazy" onerror="this.style.display='none'" />
-                <h3>Gift Sets</h3>
-                <p>Curated selections for the perfect gift</p>
-            </a>
-        </div>
-    </section>
+        <!-- Categories -->
+        <section class="section categories" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 class="section__title" id="categories-heading">Shop by Category</h2>
+                <p class="section__subtitle">Explore our curated collections</p>
+                <div class="categories__grid">
+                    <a href="/category.html?cId=7&amp;csubId=14" class="category-card" style="background: linear-gradient(135deg, #5c0e0e 0%, #8b1a1a 100%);" aria-label="Browse Red Wines collection">
+                        <h3 class="category-card__title">Red Wines</h3>
+                        <p class="category-card__desc">Full-bodied &amp; elegant Bordeaux selections</p>
+                    </a>
+                    <a href="/category.html?cId=7&amp;csubId=15" class="category-card" style="background: linear-gradient(135deg, #8b7355 0%, #b8966e 100%);" aria-label="Browse White Wines collection">
+                        <h3 class="category-card__title">White Wines</h3>
+                        <p class="category-card__desc">Crisp &amp; refreshing whites</p>
+                    </a>
+                    <a href="/category.html?cId=2" class="category-card" style="background: linear-gradient(135deg, #4a1a55 0%, #7b2d8b 100%);" aria-label="Browse Beauty collection">
+                        <h3 class="category-card__title">Beauty</h3>
+                        <p class="category-card__desc">Luxury skincare &amp; cosmetics</p>
+                    </a>
+                    <a href="/category.html?cId=1" class="category-card" style="background: linear-gradient(135deg, #1a4a3a 0%, #2d6b55 100%);" aria-label="Browse Wellness collection">
+                        <h3 class="category-card__title">Wellness</h3>
+                        <p class="category-card__desc">Health &amp; supplements</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <section class="products" id="products">
-        <h2 class="section-title">Our Wines</h2>
-        
-        <div class="filter-tabs">
-            <button class="filter-tab active" data-filter="all">All Products</button>
-            <button class="filter-tab" data-filter="red">Red Wine</button>
-            <button class="filter-tab" data-filter="white">White Wine</button>
-            <button class="filter-tab" data-filter="body">Body Care</button>
-            <button class="filter-tab" data-filter="hair">Hair Care</button>
-        </div>
+        <!-- Featured Products -->
+        <section class="section featured" aria-labelledby="featured-heading">
+            <div class="container">
+                <h2 class="section__title" id="featured-heading">Featured Products</h2>
+                <p class="section__subtitle">Hand-picked favorites from our collection</p>
+                <div class="products__grid" id="featuredProducts" role="list" aria-label="Featured products">
+                    <!-- Dynamically loaded -->
+                </div>
+            </div>
+        </section>
 
-        <div class="product-grid" id="productGrid">
-            <!-- Products will be loaded here -->
-        </div>
-    </section>
+        <!-- Wine Education FAQ (SEO content) -->
+        <section class="section faq-section" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 class="faq-section__title" id="faq-heading">Wine Education</h2>
+                <p class="section__subtitle">Learn about our curated wine collection</p>
 
-    <section class="features">
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">🚚</div>
-                <h4>Free Delivery</h4>
-                <p>Complimentary delivery on orders over HK$1,000</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">✅</div>
-                <h4>Authenticity Guaranteed</h4>
-                <p>100% authentic wines from authorized distributors</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">💳</div>
-                <h4>Secure Payment</h4>
-                <p>Multiple payment options with secure checkout</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">📞</div>
-                <h4>Expert Support</h4>
-                <p>Wine experts available to help you choose</p>
-            </div>
-        </div>
-    </section>
+                <div class="faq-list" id="wineFaq">
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false" onclick="toggleFaq(this)">What makes Bordeaux wines special?</button>
+                        <div class="faq-item__answer" role="region">
+                            <p>Bordeaux wines are renowned for their complexity and aging potential. Our collection features wines from prestigious appellations including Bordeaux Supérieur and Puisseguiin Saint-Émilion. The region's clay-limestone soils and gravel terraces produce wines with exceptional depth, structure, and elegance. Each vintage reflects the unique terroir of the Médoc and Right Bank regions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false" onclick="toggleFaq(this)">How should I store my wines?</button>
+                        <div class="faq-item__answer" role="region">
+                            <p>Store wines horizontally in a cool, dark place at 12-18°C (54-64°F) with 60-70% humidity. Avoid temperature fluctuations and direct sunlight. Our Henri de Malromé wines benefit from proper cellaring and can improve significantly over 5-10 years.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false" onclick="toggleFaq(this)">What food pairs best with red Bordeaux?</button>
+                        <div class="faq-item__answer" role="region">
+                            <p>Red Bordeaux pairs excellently with red meats, game, aged cheeses, and dishes with rich sauces. The tannic structure of our Bordeaux Supérieur selections complements grilled lamb, beef tenderloin, and duck confit. For younger wines, try pairing with hearty pasta dishes or mushroom-based recipes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false" onclick="toggleFaq(this)">What is the difference between red and white Bordeaux?</button>
+                        <div class="faq-item__answer" role="region">
+                            <p>Red Bordeaux is primarily made from Cabernet Sauvignon, Merlot, and Cabernet Franc grapes, offering bold flavors of dark fruit and oak. White Bordeaux uses Sauvignon Blanc, Sémillon, and Muscadelle, producing crisp, aromatic wines with citrus and floral notes. Our selection includes both styles from the Bordeaux AOP region.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h5>Ellis Trading</h5>
-                <p style="font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6;">
-                    Your trusted source for premium wines and spirits. We import and distribute fine wines from the world's best vineyards.
-                </p>
+                <!-- FAQ Structured Data (embedded for this page) -->
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What makes Bordeaux wines special?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Bordeaux wines are renowned for their complexity and aging potential. Our collection features wines from prestigious appellations including Bordeaux Supérieur and Puisseguiin Saint-Émilion. The region's clay-limestone soils and gravel terraces produce wines with exceptional depth, structure, and elegance."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How should I store my wines?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Store wines horizontally in a cool, dark place at 12-18°C (54-64°F) with 60-70% humidity. Avoid temperature fluctuations and direct sunlight."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What food pairs best with red Bordeaux?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Red Bordeaux pairs excellently with red meats, game, aged cheeses, and dishes with rich sauces. The tannic structure complements grilled lamb, beef tenderloin, and duck confit."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What is the difference between red and white Bordeaux?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Red Bordeaux is primarily made from Cabernet Sauvignon, Merlot, and Cabernet Franc grapes, offering bold flavors of dark fruit and oak. White Bordeaux uses Sauvignon Blanc, Sémillon, and Muscadelle, producing crisp, aromatic wines with citrus and floral notes."
+                            }
+                        }
+                    ]
+                }
+                </script>
             </div>
-            <div class="footer-section">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Wines</a></li>
-                    <li><a href="#">Delivery Info</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+        </section>
+
+        <!-- Brands -->
+        <section class="section brands" id="brands" aria-labelledby="brands-heading">
+            <div class="container">
+                <h2 class="section__title" id="brands-heading">Our Brands</h2>
+                <p class="section__subtitle">Trusted European beauty &amp; wine brands</p>
+                <div class="brands__grid" id="brandsGrid" role="list" aria-label="Available brands">
+                    <!-- Dynamically loaded -->
+                </div>
             </div>
-            <div class="footer-section">
-                <h5>Categories</h5>
-                <ul>
-                    <li><a href="#">Red Wines</a></li>
-                    <li><a href="#">White Wines</a></li>
-                    <li><a href="#">Champagne</a></li>
-                    <li><a href="#">Spirits</a></li>
-                </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h4 class="footer__heading">Vino &amp; Beauté</h4>
+                    <p class="footer__text">Premium wines, spirits, and beauty products curated for discerning tastes. Serving Hong Kong with the finest European selections since 2024.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Shop</h4>
+                    <nav aria-label="Shop links">
+                        <ul class="footer__links">
+                            <li><a href="/category.html?cId=7&amp;csubId=14">Red Wines</a></li>
+                            <li><a href="/category.html?cId=7&amp;csubId=15">White Wines</a></li>
+                            <li><a href="/category.html?cId=2">Beauty</a></li>
+                            <li><a href="/category.html?cId=1">Wellness</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Customer Service</h4>
+                    <nav aria-label="Service links">
+                        <ul class="footer__links">
+                            <li><a href="#faq-heading">FAQ</a></li>
+                            <li><a href="delivery.html">Shipping Info</a></li>
+                            <li><a href="delivery.html#returns">Returns Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" class="social-link" rel="noopener noreferrer" aria-label="Follow us on Instagram">Instagram</a>
+                        <a href="https://www.facebook.com/" class="social-link" rel="noopener noreferrer" aria-label="Follow us on Facebook">Facebook</a>
+                        <a href="https://x.com/" class="social-link" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">X (Twitter)</a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h5>Contact Us</h5>
-                <ul>
-                    <li><a href="#">📍 Hong Kong</a></li>
-                    <li><a href="#">📞 +852 6493 9319</a></li>
-                    <li><a href="#">✉️ ellistradinglimited2018@gmail.com</a></li>
-                </ul>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Vino &amp; Beauté — ellis-trading.shop. All rights reserved.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Ellis Trading. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Cart Sidebar -->
-    <div id="cartSidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button class="cart-close" onclick="toggleCart()">✕</button>
+    <aside class="cart-sidebar" id="cartSidebar" role="dialog" aria-label="Shopping cart">
+        <div class="cart-sidebar__header">
+            <h3>Shopping Cart</h3>
+            <button onclick="toggleCart()" aria-label="Close cart">✕</button>
         </div>
-        <div id="cartItems" class="cart-items"></div>
-        <div class="cart-footer">
+        <div class="cart-sidebar__items" id="cartItems" aria-live="polite">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-sidebar__footer">
             <div class="cart-total">
                 <span>Total:</span>
                 <span id="cartTotal">HK$0</span>
             </div>
-            <button class="btn btn-primary" style="width:100%;margin-top:15px;" onclick="openCheckout()">Checkout</button>
+            <button class="btn btn--primary btn--full" onclick="handleCheckout()" aria-label="Proceed to checkout">Checkout</button>
         </div>
-    </div>
-    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+    </aside>
 
-    <!-- Checkout Modal -->
-    <div id="checkoutModal" class="checkout-modal">
-        <div class="checkout-content">
-            <div class="checkout-header">
-                <h3>Place Order</h3>
-                <button class="cart-close" onclick="closeCheckout()">✕</button>
-            </div>
-            <form id="checkoutForm" onsubmit="submitOrder(event)">
-                <div class="form-group">
-                    <label>Name *</label>
-                    <input type="text" id="custName" required placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" id="custPhone" required placeholder="+852 XXXX XXXX">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="custEmail" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Delivery Address *</label>
-                    <textarea id="custAddress" required rows="2" placeholder="Delivery address in Hong Kong"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Notes</label>
-                    <textarea id="custNotes" rows="2" placeholder="Any special requests..."></textarea>
-                </div>
-                <div class="order-summary" id="orderSummary"></div>
-                <button type="submit" class="btn btn-primary" style="width:100%;margin-top:15px;">Send Order via Email</button>
-            </form>
-        </div>
-    </div>
+    <div class="overlay" id="overlay" onclick="toggleCart()" role="presentation"></div>
 
-    <script>
-        // Cart functionality
-        let cart = JSON.parse(localStorage.getItem('ellis_cart') || '[]');
-
-        function saveCart() {
-            localStorage.setItem('ellis_cart', JSON.stringify(cart));
-            updateCartCount();
-        }
-
-        function addToCart(name, price) {
-            const existing = cart.find(item => item.name === name);
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ name, price, qty: 1 });
-            }
-            saveCart();
-            // Show feedback
-            const btn = event.target;
-            const original = btn.textContent;
-            btn.textContent = '✓ Added';
-            btn.style.background = '#27ae60';
-            setTimeout(() => {
-                btn.textContent = original;
-                btn.style.background = '';
-            }, 1500);
-        }
-
-        function removeFromCart(name) {
-            cart = cart.filter(item => item.name !== name);
-            saveCart();
-            renderCart();
-        }
-
-        function updateQty(name, delta) {
-            const item = cart.find(i => i.name === name);
-            if (item) {
-                item.qty += delta;
-                if (item.qty <= 0) {
-                    removeFromCart(name);
-                    return;
-                }
-            }
-            saveCart();
-            renderCart();
-        }
-
-        function updateCartCount() {
-            const count = cart.reduce((sum, item) => sum + item.qty, 0);
-            document.querySelectorAll('.cart-count').forEach(el => el.textContent = count);
-        }
-
-        function toggleCart() {
-            document.getElementById('cartSidebar').classList.toggle('open');
-            document.getElementById('cartOverlay').classList.toggle('open');
-            if (document.getElementById('cartSidebar').classList.contains('open')) {
-                renderCart();
-            }
-        }
-
-        function renderCart() {
-            const container = document.getElementById('cartItems');
-            if (cart.length === 0) {
-                container.innerHTML = '<p style="text-align:center;color:#999;padding:40px;">Your cart is empty</p>';
-            } else {
-                container.innerHTML = cart.map(item => `
-                    <div class="cart-item">
-                        <div class="cart-item-info">
-                            <div class="cart-item-name">${item.name}</div>
-                            <div class="cart-item-price">${item.price}</div>
-                        </div>
-                        <div class="cart-item-actions">
-                            <button onclick="updateQty('${item.name}', -1)">−</button>
-                            <span>${item.qty}</span>
-                            <button onclick="updateQty('${item.name}', 1)">+</button>
-                            <button class="cart-item-remove" onclick="removeFromCart('${item.name}')">✕</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-            const total = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace(/[^0-9]/g, ''));
-                return sum + price * item.qty;
-            }, 0);
-            document.getElementById('cartTotal').textContent = 'HK$' + total.toLocaleString();
-        }
-
-        // Order confirmation modal
-        function showOrderConfirmation({ name, orderHtml, total, phone, address }) {
-            // Create confirmation overlay
-            const overlay = document.createElement('div');
-            overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:5000;display:flex;justify-content:center;align-items:center;padding:20px;';
-            overlay.innerHTML = `
-                <div style="background:#fff;border-radius:12px;max-width:480px;width:100%;padding:35px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:fadeIn 0.3s ease">
-                    <div style="font-size:48px;margin-bottom:15px;">✅</div>
-                    <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#1a1a2e;margin-bottom:8px;">Order Confirmed!</h3>
-                    <p style="color:#666;font-size:14px;margin-bottom:20px;">Thank you, ${name}! A confirmation email is on its way.</p>
-                    <div style="background:#f8f8f8;border-radius:8px;padding:15px;margin-bottom:20px;text-align:left;">
-                        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-                            ${orderHtml}
-                            <tr style="font-weight:600;border-top:2px solid #1a1a2e"><td style="padding:8px">Total</td><td style="padding:8px;text-align:center"></td><td style="padding:8px;text-align:right">HK$${total.toLocaleString()}</td></tr>
-                        </table>
-                    </div>
-                    <div style="font-size:13px;color:#999;margin-bottom:20px;">
-                        📞 +852 6493 9319 · ✉️ ellistradinglimited2018@gmail.com
-                    </div>
-                    <button onclick="this.closest('#overlayWrap').remove()" style="background:#c9a227;color:#fff;border:none;padding:12px 30px;border-radius:6px;font-size:14px;cursor:pointer;">Continue Shopping</button>
-                </div>
-            `;
-            overlay.id = 'overlayWrap';
-            document.body.appendChild(overlay);
-            overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
-            // Ensure fadeIn keyframe exists
-            if (!document.getElementById('confAnim')) {
-                const style = document.createElement('style');
-                style.id = 'confAnim';
-                style.textContent = '@keyframes fadeIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}';
-                document.head.appendChild(style);
-            }
-        }
-
-        // Checkout functions
-        function openCheckout() {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-            toggleCart();
-            document.getElementById('checkoutModal').classList.add('open');
-            renderOrderSummary();
-        }
-
-        function closeCheckout() {
-            document.getElementById('checkoutModal').classList.remove('open');
-        }
-
-        function renderOrderSummary() {
-            const total = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace(/[^0-9]/g, ''));
-                return sum + price * item.qty;
-            }, 0);
-            const lines = cart.map(item => 
-                `<div class="order-line"><span>${item.name} x${item.qty}</span><span>${item.price}</span></div>`
-            ).join('');
-            document.getElementById('orderSummary').innerHTML = 
-                `<h4>Order Summary</h4>${lines}<div class="order-line order-total"><span>Total</span><span>HK$${total.toLocaleString()}</span></div>`;
-        }
-
-        function submitOrder(e) {
-            e.preventDefault();
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const email = document.getElementById('custEmail').value;
-            const address = document.getElementById('custAddress').value;
-            const notes = document.getElementById('custNotes').value;
-
-            const total = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace(/[^0-9]/g, ''));
-                return sum + price * item.qty;
-            }, 0);
-
-            let orderDetails = '';
-            let orderHtml = '';
-            cart.forEach(item => {
-                orderDetails += `- ${item.name} x${item.qty} = ${item.price}\n`;
-                orderHtml += `<tr style="border-bottom:1px solid #eee"><td style="padding:6px 8px">${item.name}</td><td style="padding:6px 8px;text-align:center">${item.qty}</td><td style="padding:6px 8px;text-align:right">${item.price}</td></tr>`;
-            });
-
-            const formData = {
-                _replyto: email,
-                _subject: `New Order - HK$${total.toLocaleString()} from ${name}`,
-                name: name,
-                phone: phone,
-                email: email,
-                address: address,
-                notes: notes,
-                order: orderDetails,
-                total: `HK$${total.toLocaleString()}`
-            };
-
-            // Show submitting state
-            const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            Promise.all([
-                // 1. Send order to Ellis via Formspree
-                fetch('https://formspree.io/f/xdargrng', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                }),
-                // 2. Send confirmation to customer via FormSubmit  
-                fetch('https://formsubmit.co/ajax/ellistradinglimited2018@gmail.com', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        _replyto: email,
-                        _subject: `Order Confirmation - Ellis Trading`,
-                        message: `Hi ${name},\n\nThank you for your order! Here's a summary:\n\n${orderDetails}\nTotal: HK$${total.toLocaleString()}\nDelivery: ${address}\n\nWe will contact you at ${phone} or ${email} within 24 hours to confirm.\n\nBest regards,\nEllis Trading\n+852 6493 9319`,
-                        _autoresponse: `Hi ${name},\n\nThank you for your order with Ellis Trading!\n\nOrder Summary:\n${orderDetails}\nTotal: HK$${total.toLocaleString()}\nDelivery Address: ${address}\n\nWe'll contact you at ${phone} within 24 hours to confirm delivery details.\n\nIf you have any questions, please contact us:\n📞 +852 6493 9319\n✉️ ellistradinglimited2018@gmail.com\n\nBest regards,\nEllis Trading Team`
-                    })
-                })
-            ])
-            .then(responses => {
-                const ok = responses.every(r => r.ok || r.status < 400);
-                if (ok) {
-                    cart = [];
-                    saveCart();
-                    closeCheckout();
-                    document.getElementById('checkoutForm').reset();
-                    // Show confirmation modal
-                    showOrderConfirmation({ name, orderHtml, total, phone, address });
-                } else {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    alert('Order placed (notification sent). We will contact you shortly.');
-                }
-            })
-            .catch(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                alert('Network error. Please try again or email us directly at ellistradinglimited2018@gmail.com');
-            });
-        }
-
-        // Product data
-        const products = [
-            {
-                name: "LA CUVEE HENRI 2018",
-                nameCn: "亨利特釀 2018",
-                cat: "Red Wine",
-                price: "HK$650",
-                img: "/images/LA CUVEE HENRI 2018.jpg",
-                badge: "Popular"
-            },
-            {
-                name: "LA RÉSERVE DE ROSTÉGUY 2008",
-                nameCn: "羅斯特傑紅葡萄酒 2008",
-                cat: "Red Wine",
-                price: "HK$960",
-                img: "/images/LA RÉSERVE DE ROSTÉGUY 2008.jpg",
-                badge: ""
-            },
-            {
-                name: "LA RÉSERVE HENRI 2016",
-                nameCn: "亨利酒窖珍藏 2016",
-                cat: "Red Wine",
-                price: "HK$960",
-                img: "/images/LA RÉSERVE HENRI 2016.jpg",
-                badge: ""
-            },
-            {
-                name: "COUR DE MONTEGNAN 2017",
-                nameCn: "蒙特尼昂庫爾紅葡萄酒 2017",
-                cat: "Red Wine",
-                price: "HK$550",
-                img: "/images/COUR DE MONTEGNAN 2017.jpg",
-                badge: ""
-            },
-            {
-                name: "LE CLOS DE LA ROQUETTE 2019",
-                nameCn: "羅凱特葡萄園紅葡萄酒 2019",
-                cat: "Red Wine",
-                price: "HK$500",
-                img: "/images/LE CLOS DE LA ROQUETTE 2019.jpg",
-                badge: "New"
-            },
-            {
-                name: "LE CLOS DE LA ROQUETTE 2019 x 4 BOTTLES",
-                nameCn: "羅凱特葡萄園紅葡萄酒 2019 四瓶特惠組",
-                cat: "Red Wine",
-                price: "HK$1,600",
-                img: "/images/LE CLOS DE LA ROQUETTE 2019 x 4 BOTTLES.jpg",
-                badge: "Value Pack"
-            },
-            {
-                name: "LE DONJON DE CELEYRAN 2019",
-                nameCn: "賽列亨城堡紅葡萄酒 2019",
-                cat: "Red Wine",
-                price: "HK$650",
-                img: "/images/LE DOMAINE DE LA GLORIETTE 2020.jpg",
-                badge: ""
-            },
-            {
-                name: "LE DONJON DE CELEYRAN 2019 x 4 BOTTLES",
-                nameCn: "賽列亨城堡紅葡萄酒 2019 四瓶特惠組",
-                cat: "Red Wine",
-                price: "HK$2,080",
-                img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg",
-                badge: "Value Pack"
-            },
-            {
-                name: "LE DOMAINE DE LA GLORIETTE 2020",
-                nameCn: "歌麗亭莊園白葡萄酒 2020",
-                cat: "White Wine",
-                price: "HK$466",
-                img: "/images/LE DOMAINE DE LA GLORIETTE 2020.jpg",
-                badge: "New"
-            },
-            {
-                name: "LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES",
-                nameCn: "歌麗亭莊園白葡萄酒 2020 四瓶特惠組",
-                cat: "White Wine",
-                price: "HK$1,255",
-                img: "/images/LE DOMAINE DE LA GLORIETTE 2020 x 4 BOTTLES.jpg",
-                badge: "Value Pack"
-            },
-            // Beauty & Body Products
-            {
-                name: "EUCALYPTUS BODY MILK",
-                                nameCn: "尤加利活力身體乳",
-                                cat: "Body Care",
-                                price: "HK$480",
-                                img: "/images/beauty/eucalyptus-body-milk.jpg",
-                                                badge: ""
-            },
-            {
-                name: "SANDALWOOD BODY MILK",
-                nameCn: "檀香亮彩身體乳",
-                cat: "Body Care",
-                price: "HK$480",
-                img: "/images/beauty/sandalwood-body-milk.jpg",
-                badge: ""
-            },
-            {
-                name: "SANDALWOOD SHOWER GEL",
-                nameCn: "檀香潤膚沐浴乳",
-                cat: "Body Care",
-                price: "HK$405",
-                img: "/images/beauty/sandalwood-shower-gel.jpg",
-                badge: ""
-            },
-            {
-                name: "LAVENDER SHAMPOO",
-                nameCn: "薰衣草盈柔洗髮乳",
-                cat: "Hair Care",
-                price: "HK$299",
-                img: "/images/beauty/sandalwood-shower-gel.jpg",
-                badge: "Popular"
-            },
-            {
-                name: "BODY SHAPING OIL",
-                                nameCn: "玲瓏美體精華油",
-                                cat: "Body Care",
-                                price: "HK$325",
-                                img: "/images/beauty/body-shaping-oil.jpg",
-                                                badge: ""
-            },
-            {
-                name: "EUCALYPTUS MASSAGE OIL",
-                nameCn: "尤加利淨化精油",
-                cat: "Body Care",
-                price: "HK$700",
-                img: "/images/beauty/eucalyptus-massage-oil.jpg",
-                badge: ""
-            },
-            {
-                name: "EUCALYPTUS SHAMPOO",
-                nameCn: "尤加利亮效洗髮乳",
-                cat: "Hair Care",
-                price: "HK$405",
-                img: "/images/beauty/eucalyptus-shampoo.jpg",
-                badge: ""
-            },
-            {
-                name: "LAVENDER MASSAGE OIL",
-                nameCn: "薰衣草平衡精油",
-                cat: "Body Care",
-                price: "HK$700",
-                img: "/images/beauty/lavender-massage-oil.jpg",
-                badge: ""
-            },
-            {
-                name: "COLOUR RESIST SHAMPOO",
-                nameCn: "染後三效洗髮精",
-                cat: "Hair Care",
-                price: "HK$575",
-                img: "/images/beauty/colour-resist-shampoo.jpg",
-                badge: ""
-            },
-            {
-                name: "Detangling & Moisturizing Conditioner",
-                nameCn: "滋逸潤絲乳",
-                cat: "Hair Care",
-                price: "HK$575",
-                img: "/images/beauty/colour-resist-shampoo.jpg",
-                badge: ""
-            },
-            {
-                name: "DRY FLAKES CONTROL SHAMPOO",
-                nameCn: "抗屑洗髮精",
-                cat: "Hair Care",
-                price: "HK$650",
-                img: "/images/beauty/dry-flakes-control-shampoo.jpg",
-                badge: ""
-            },
-            {
-                name: "ENERGIZING SHAMPOO",
-                nameCn: "活力洗髮精",
-                cat: "Hair Care",
-                price: "HK$550",
-                img: "/images/beauty/energizing-shampoo.jpg",
-                badge: ""
-            },
-            {
-                name: "NOURISHING CREAM WITH SHEA BUTTER",
-                nameCn: "乳油木秀髮滋養霜",
-                cat: "Hair Care",
-                price: "HK$450",
-                img: "/images/beauty/nourishing-cream-shea-butter.jpg",
-                badge: ""
-            },
-            {
-                name: "HAIR REPAIRING MASK",
-                nameCn: "乳油木修復膜",
-                cat: "Hair Care",
-                price: "HK$413",
-                img: "/images/beauty/hair-repairing-mask.jpg",
-                badge: ""
-            },
-            {
-                name: "PROTECTIVE CREAM WITH SHEA BUTTER SPF 10",
-                nameCn: "乳油木秀髮防護霜 SPF 10",
-                cat: "Hair Care",
-                price: "HK$875",
-                img: "/images/beauty/protective-cream-shea-butter.jpg",
-                badge: ""
-            },
-            {
-                name: "PROTECTIVE SPRAY SPF 10",
-                nameCn: "維生素秀髮防曬液SPF 10",
-                cat: "Hair Care",
-                price: "HK$625",
-                img: "/images/beauty/protective-spray-spf10.jpg",
-                badge: ""
-            }
-        ];
-
-        // Render products
-        function renderProducts(filter = 'all') {
-            const grid = document.getElementById('productGrid');
-            const filteredProducts = filter === 'all' 
-                ? products 
-                : products.filter(p => p.cat.toLowerCase().includes(filter));
-            
-            function getSlug(name) {
-                return name.toLowerCase().replace(/ /g, "-").replace(/&/g, "and").replace(/'/g, "").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
-            }
-            grid.innerHTML = filteredProducts.map(product => `
-                <a href="/products/${getSlug(product.name)}/" class="product-card" data-category="${product.cat.toLowerCase()}">
-                    <div class="product-image">
-                        <img src="${product.img}" alt="${product.name}" loading="lazy">
-                        ${product.badge ? `<span class="product-badge ${product.badge === 'New' ? 'new' : ''}">${product.badge}</span>` : ''}
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${product.cat}</div>
-                        <h3 class="product-name">${product.name}</h3>
-                        <div class="product-name-cn">${product.nameCn}</div>
-                        <div class="product-price">${product.price}</div>
-                    </div>
-                </a>
-            `).join('');
-        }
-
-        // Filter tabs
-        document.querySelectorAll('.filter-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                renderProducts(tab.dataset.filter);
-            });
-        });
-
-        // Initial render
-        renderProducts();
-        updateCartCount();
-
-        // Auto-filter on hash (for category nav links like #filter-beauty, #filter-wellness)
-        const filterMap = {
-            'filter-beauty': 'body',
-            'filter-wellness': 'hair',
-            'filter-red': 'red',
-            'filter-white': 'white',
-            'filter-wines': 'all'
-        };
-        const initialHash = window.location.hash.replace('#', '');
-        if (filterMap[initialHash]) {
-            const tab = document.querySelector(`.filter-tab[data-filter="${filterMap[initialHash]}"]`);
-            if (tab) {
-                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                renderProducts(filterMap[initialHash]);
-            }
-        }
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    // For filter hashes, scroll to products section
-                    const targetId = href.includes('filter-') ? '#products' : href;
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
-<!-- cache-bust -->
